@@ -1,0 +1,79 @@
+/* pages/search/index.wxss */
+.container{
+  padding: 8rpx;
+}
+.search-head{
+  width: 100%;
+  height: 60rpx;
+  min-height: 60rpx;
+  max-height: 60rpx;
+  border-radius: 30rpx;
+  border: 1px #ca2100 solid;
+  overflow: hidden;
+  margin-top: 5rpx;
+}
+.search-back{
+  width: 15%;
+  height: 100%;
+  background: rgb(202,33,0);
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  display: block;
+  float: left;
+}
+.search-input{
+  width: 75%;
+  height: 100%;
+  float: left;
+  font-size: 30rpx;
+  padding: 0 5rpx 0 5rpx;
+}
+.search-btn{
+  width: 8.5%;
+  height: 100%;
+  background: #ca2100;
+  text-align: center;
+  line-height: 60rpx;
+  float: right;
+  border-radius: 0;
+}
+.search-icon{
+  margin-left: -10rpx;
+  color: #fff;
+}
+.search-list-wraper{
+  max-height: 800rpx;
+  box-shadow: 0 0 5rpx rgba(0,0,0,.3);
+}
+.search-list{
+  border-bottom: 1rpx #eee solid;
+  font-size: 30rpx;
+  display: block;
+  padding: 8rpx 5rpx;
+}
+.search-list-icon{
+  margin-right: 5rpx;
+}
+/* 搜索结果 */
+.search-list-result-wrapper{
+  height: calc(100% - 70rpx);
+}
+.search-result{
+  display: block;
+  border-bottom: 1px rgb(245,245,245) solid;
+  padding:8rpx 5rpx;
+  font-size: 26rpx;
+}
+.search-result-name{
+  margin-right: 5rpx;
+}
+.search-result-alias{
+  color: rgb(166,168,167);
+  margin-left: 5rpx;
+}
+.search-result-artists{
+  display: block;
+  color: rgb(166,168,167);
+}
+

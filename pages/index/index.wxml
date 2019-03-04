@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<wxs src="./api.wxs" module="api" />
+<view class="container">
+  <view class='search' bindtap='toSearch'>
+    <text class='iconfont icon-search search-icon'></text>
+  </view>
+  <scroll-view scroll-y scroll-with-animation='true'>
+    <view class='item' wx:for="{{movieList}}" wx:key='index' bindtap='bindTap'>
+      <image src='{{item.pic}}' class='item-pic'></image>
+      <text class='item-year'>2019</text>
+      <text class='item-year'>{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>

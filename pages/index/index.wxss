@@ -1,0 +1,46 @@
+/* pages/index/index.wxss */
+
+.container {
+  padding-left: 12rpx;
+}
+/* .header{
+  width: 100%;
+  font-size: 20rpx;
+  text-align: center;
+  color: rgb(212, 211, 211);
+} */
+.search{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+  background: rgba(202, 33, 0, 0.9);
+  box-shadow: 0 0 20rpx #000;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50%;
+  z-index: 2;
+  color: #fff;
+}
+.search-icon{
+  font-size: 40rpx;
+}
+.item {
+  width: 340rpx;
+  height: 300rpx;
+  border: 1px #eee solid;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  overflow: hidden;
+  float: left;
+  margin-left: 15rpx;
+  margin-top:20rpx;
+}
+.item-pic {
+  width: 100%;
+  height: 250rpx;
+}
+.item-year {
+  font-size: 26rpx;
+}
