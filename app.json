@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mv/index",
+    "pages/music/index",
+    "pages/search/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#CA2100",
+    "navigationBarTitleText": "皮皮听音乐",
+    "navigationBarTextStyle": "white"
+  }
+}

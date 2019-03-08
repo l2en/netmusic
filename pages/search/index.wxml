@@ -1,0 +1,25 @@
+<!--pages/search/index.wxml-->
+<view class='container'>
+  <view class='search-head'>
+    <text class='iconfont icon-back search-back' bindtap='back'></text>
+    <input class='search-input' placeholder='搜 索' value='{{searchValue}}' confirm-type='search' bindinput='handleInput' bindconfirm='bindconfirm'></input>
+    <button class='search-btn' bindtap='handleSearch'>
+      <text class='iconfont icon-search search-icon'></text>
+    </button>
+  </view>
+  <!-- 搜索建议 -->
+  <scroll-view scroll-y class='search-list-wraper' hidden='{{searchListHidden}}'>
+    <text bindtap='getSearchList' class='search-list' data-name='{{item.keyword}}' wx:for='{{allMatch}}' wx:key='index'>
+      <text class='iconfont icon-search search-list-icon'></text>{{item.keyword}}
+    </text>
+  </scroll-view>
+  <view class='loader search-loading' hidden='{{!loading}}'>loading...</view>
+  <!-- 搜索歌曲列表 -->
+  <scroll-view class='search-list-result-wrapper' scroll-y >
+    <text class='search-result' wx:for='{{songs}}' wx:key='{{item.id}}' data-id='{{item.id}}' bindtap='playMusic'>
+      <text class='search-result-name'>{{item.name}}</text><text hidden='{{item.alias[0]?false:true}}' class='search-result-alias'>{{item.alias[0]}}</text>
+      <text class='search-result-artists'>{{item.artists[0].name}} - {{item.album.name}}</text>
+      <text class='search-result-alias' hidden='{{item.alias[0]?false:true}}'>{{item.alias[0]}}</text>
+    </text>
+  </scroll-view>
+</view>
