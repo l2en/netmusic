@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/search/index",
-    "pages/play/index"
+    "pages/mv/index",
+    "pages/music/index",
+    "pages/search/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

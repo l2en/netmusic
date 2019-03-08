@@ -1,88 +1,91 @@
-//index.js
-//获取应用实例
-const app = getApp()
+const tool = require('../../utils/tool.js');
 
 Page({
   data: {
-    picSrc: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-    movieList: [{
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
+    movieList: [
+      {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
       },
       {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
       }, {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
+      }, {
+        pic: 'https://dwz.cn/Li29qlXY',
+        name: '冰雪奇222333缘'
       },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      },
-      {
-        pic: 'http://img2.imgtn.bdimg.com/it/u=2728111176,1787116770&fm=26&gp=0.jpg',
-        name: '冰雪奇缘'
-      }
     ],
-    hideHeader: true
+    hideHeader: true,
+    addAnimationDown: false,
+    addAnimationUp: false
   },
   //事件处理函数
   bindTap(){
     wx.navigateTo({
-      url: "../play/index"
+      url: "../mv/index"
     })
   },
   /*上拉加载更多*/
@@ -102,5 +105,38 @@ Page({
     wx.navigateTo({
       url: '../search/index',
     })
-  }
+  },
+  // 获取按下坐标
+  touchStart(e) {
+    let startX = e.touches[0].pageX;
+    let startY = e.touches[0].pageY;
+    this.setData({
+      startX: startX,
+      startY: startY,
+    })
+  },
+
+  // 触摸结束
+  touchEnd(e) {
+    let endX = e.changedTouches[0].pageX;
+    let endY = e.changedTouches[0].pageY;
+    this.setData({
+      endX: endX,
+      endY: endY,
+    }, () => {
+      const {
+        endX,
+        endY,
+        startX,
+        startY
+      } = this.data
+      let direction = tool.getTouchcolum(endX, endY, startX, startY);
+      console.log('方向', direction);
+      if (direction == 'down'){
+        this.setData({ addAnimationDown: false})
+      } else{
+        this.setData({ addAnimationDown: true })
+      }
+    })
+  },
 })

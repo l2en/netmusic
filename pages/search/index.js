@@ -9,7 +9,8 @@ Page({
     allMatch: [],
     searchValue: '',
     searchListHidden: true,
-    songs:[]
+    songs:[],
+    loading: false
   },
 
   /**
@@ -76,7 +77,8 @@ Page({
   handleInput(e) {
     const _this = this
     _this.setData({
-      allMatch:[]
+      allMatch:[],
+      loading: true
     })
     if (!e.detail.value.replace(/\s+/g, '')) return;
     this.setData({
@@ -90,6 +92,7 @@ Page({
           console.log('返回', res)
           if (!res.data.result.allMatch) return;
           _this.setData({
+            loading: false,
             searchListHidden: false,
             allMatch: res.data.result.allMatch
           })
@@ -105,7 +108,8 @@ Page({
   handleSearch() {
     const _this = this;
     _this.setData({
-      searchListHidden: true
+      searchListHidden: true,
+      loading: true
     })
     const { searchValue } = this.data;
     if (!searchValue) return;
@@ -119,6 +123,7 @@ Page({
         console.log('搜索单曲===》》》》》》', res);
         if (res.statusCode != 200) return;
         _this.setData({
+          loading: false,
           songs: res.data.result.songs
         })
       }

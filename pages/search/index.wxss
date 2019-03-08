@@ -76,4 +76,8 @@
   display: block;
   color: rgb(166,168,167);
 }
-
+/* 加载动画 */
+.search-loading{
+  display: block;
+  height: 100rpx;
+}

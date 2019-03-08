@@ -6,6 +6,8 @@ Page({
    */
   data: {
     musicurl: '',
+    poster: "http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg",
+    controls: true
   },
 
   /**
@@ -14,14 +16,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       musicurl: `https://music.163.com/song/media/outer/url?id=${options.songid}.mp3`
-    });
-
-    wx.playBackgroundAudio({
-      dataUrl: `https://music.163.com/song/media/outer/url?id=${options.songid}.mp3`,
-      title: '皮皮听音乐',
-      coverImgUrl: ''
     })
-
   },
 
   /**

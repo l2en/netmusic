@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.1",
+	"libVersion": "2.6.1",
 	"appid": "wx4577da714279820f",
-	"projectname": "todolist",
+	"projectname": "netmusic",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

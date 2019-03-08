@@ -4,9 +4,9 @@ App({
    
   },
   globalData: {
-    userInfo: null
+    
   },
   config: {
-    host: 'http://www.wyyyy.xyz'
+    
   },
 })

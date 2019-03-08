@@ -1,0 +1,80 @@
+/* pages/mv/index.wxss */
+
+.wrapper {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.mv-player {
+  width: 100%;
+}
+
+/* tab */
+
+.mv-player-tab {
+  width: 100%;
+  height: 40rpx;
+}
+
+.mv-player-tab-item {
+  height: 40rpx;
+  width: 33%;
+  text-align: center;
+  display: block;
+  font-size: 26rpx;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+
+.mv-player-tab-item:nth-child(1) {
+  border-bottom: 5rpx #ca2100 solid;
+}
+
+/* 评论主体 */
+
+.mv-player-main {
+  background-color: rgb(242, 244, 245);
+  display: block;
+  padding: 0 20rpx 20rpx 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+.mv-player-details-name {
+  color: rgb(51, 51, 51);
+  font-size: 30rpx;
+}
+
+.mv-player-details-singer {
+  color: rgb(100, 149, 194);
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.mv-player-details-played {
+  color: rgb(170, 170, 170);
+  font-size: 22rpx;
+}
+.mv-player-details-publishTime{
+  font-size: 20rpx;
+  color: rgb(170, 170, 170);
+  margin-top: 25rpx;
+}
+.mv-player-details-intro{
+  color: rgb(85, 81, 81);
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  text-indent: 2em;
+  line-height: 40rpx;
+}
+/* 清除浮动 */
+
+.clr {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}

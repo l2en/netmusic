@@ -2,13 +2,8 @@
 
 .container {
   padding-left: 12rpx;
+  height: 100vh;
 }
-/* .header{
-  width: 100%;
-  font-size: 20rpx;
-  text-align: center;
-  color: rgb(212, 211, 211);
-} */
 .search{
   width: 100rpx;
   height: 100rpx;
@@ -43,4 +38,18 @@
 }
 .item-year {
   font-size: 26rpx;
+}
+.animationUp{
+  animation: up .3s forwards;
+}
+.animationDown{
+  animation:down .3s forwards;
+}
+@keyframes up{
+ from {bottom: -120rpx;}
+  to {bottom: 50rpx;}
+}
+@keyframes down{
+  from {bottom: 50rpx;}
+  to {bottom: -120rpx;}
 }

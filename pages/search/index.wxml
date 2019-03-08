@@ -2,7 +2,7 @@
 <view class='container'>
   <view class='search-head'>
     <text class='iconfont icon-back search-back' bindtap='back'></text>
-    <input class='search-input' value='{{searchValue}}' confirm-type='search' bindinput='handleInput' bindconfirm='bindconfirm'></input>
+    <input class='search-input' placeholder='搜 索' value='{{searchValue}}' confirm-type='search' bindinput='handleInput' bindconfirm='bindconfirm'></input>
     <button class='search-btn' bindtap='handleSearch'>
       <text class='iconfont icon-search search-icon'></text>
     </button>
@@ -13,6 +13,7 @@
       <text class='iconfont icon-search search-list-icon'></text>{{item.keyword}}
     </text>
   </scroll-view>
+  <view class='loader search-loading' hidden='{{!loading}}'>loading...</view>
   <!-- 搜索歌曲列表 -->
   <scroll-view class='search-list-result-wrapper' scroll-y >
     <text class='search-result' wx:for='{{songs}}' wx:key='{{item.id}}' data-id='{{item.id}}' bindtap='playMusic'>

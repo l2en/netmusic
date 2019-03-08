@@ -1,5 +1,0 @@
-/* pages/play/index.wxss */
-.player{
-  width: 100%;
-  height: 500rpx;
-}
