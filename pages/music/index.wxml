@@ -1,4 +1,0 @@
-<!--pages/play/index.wxml-->
-<view class='music-player'>
-  <audio poster="http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg" name="{{name}}" author="{{author}}" src="{{musicurl}}" id="myAudio" controls='{{controls}}' loop></audio>
-</view>
