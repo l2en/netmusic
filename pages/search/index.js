@@ -146,7 +146,7 @@ Page({
     console.log(e.currentTarget.dataset.id);
     let songid = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `../play/index?songid=${songid}`,
+      url: `../music/index?songid=${songid}`,
     })
   }
 })

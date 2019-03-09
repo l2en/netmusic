@@ -57,7 +57,7 @@
 }
 /* 搜索结果 */
 .search-list-result-wrapper{
-  height: calc(100% - 70rpx);
+  height: calc(100vh - 80rpx);
 }
 .search-result{
   display: block;

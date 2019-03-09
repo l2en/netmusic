@@ -77,4 +77,8 @@ Page({
       }
     })
   },
+  // 拖动进度
+  timeSliderChanged(e){
+    console.log('进度', e)
+  }
 })

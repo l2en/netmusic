@@ -1,4 +1,42 @@
 <!--pages/play/index.wxml-->
-<view class='music-player'>
-  <audio poster="http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg" name="{{name}}" author="{{author}}" src="{{musicurl}}" id="myAudio" controls='{{controls}}' loop></audio>
+<view class='music-player-container'>
+  <!-- <audio poster="http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg" name="{{name}}" author="{{author}}" src="{{musicurl}}" id="myAudio" controls='{{controls}}' loop></audio> -->
+  <view class='music-player-coverPoster'>
+    <image src='./imgs/poster.jpg' class='music-player-posterImg'></image>
+  </view>
+  <!-- woxianzaidedasuanjiushi chendianzij xinziguranzhongyao danhibuyaoweilexinzijiumangmudetiaocao xianchengdianziji weibujiudejianglaizuozhunbei qugenghaodepingtai xinziziranjiugaole kechixufazhanhenzhongyao -->
+  <scroll-view class='music-player-lrc' scroll-y>
+    <text class='lrc'>梨花树下卷丝轮 随风纷纷</text>
+    <text class='lrc'>谁裁木鹊一缕魂 落别村</text>
+    <text class='lrc'>风影无心惊扰了 对棋人</text>
+    <text class='lrc'>幔里和诗 怕春雨成盆</text>
+    <text class='lrc'>玉指揽风风不住 茜纱窗昏</text>
+    <text class='lrc'>舟上摇波波不停 渡影重温</text>
+    <text class='lrc'>一抹笙香 吹梦成真</text>
+    <text class='lrc'>风筝误 误了梨花花又开</text>
+  </scroll-view>
+  <view class='music-player-controller'>
+    <view class='music-player-controller-left'>
+      <image src='./imgs/poster.jpg' class='music-player-controller-poster'></image>
+      <image src='./imgs/oneloop.svg' class='iconSize'></image>
+    </view>
+    <view class='music-player-controller-right'>
+      <view>
+
+        <text class='music-player-controller-right-songName'>风筝误  -  刘珂诶(古风)</text>
+        <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' />
+        <view class='music-player-controller-right-time'>
+          <text>1:32</text>
+          <text>4:50</text>
+        </view>
+      </view>
+
+      <view class='music-player-controller-right-songContorller'>
+        <image src='./imgs/presong.svg' class='iconSize'></image>
+        <image src='./imgs/pause.svg' class='iconSize'></image>
+        <image src='./imgs/nextsong.svg' class='iconSize'></image>
+        <image src='./imgs/more.svg' class='iconSize'></image>
+      </view>
+    </view>
+  </view>
 </view>
