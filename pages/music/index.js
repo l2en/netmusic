@@ -7,7 +7,9 @@ Page({
   data: {
     musicurl: '',
     poster: "http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg",
-    controls: true
+    audioAction: {
+      method: 'play'
+    }
   },
 
   /**
@@ -78,7 +80,26 @@ Page({
     })
   },
   // 拖动进度
-  timeSliderChanged(e){
+  timeSliderChanged(e) {
     console.log('进度', e)
+  },
+  // 播放音乐
+  play() {
+    console.log('play')
+
+    this.setData({
+      audioAction: {
+        method: 'pause'
+      }
+    });
+  },
+  pause(){
+    console.log('pause')
+
+    this.setData({
+      audioAction: {
+        method: 'play'
+      }
+    });
   }
 })
