@@ -1,4 +1,6 @@
 // pages/play/index.js
+const innerAudioContext = wx.createInnerAudioContext()
+
 Page({
 
   /**
@@ -7,18 +9,30 @@ Page({
   data: {
     musicurl: '',
     poster: "http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg",
-    audioAction: {
-      method: 'play'
-    }
+
+    bgSrc: 'https://dwz.cn/wbPxDoMM',
+    songDetails: {},
+    playIco: './imgs/pause.svg'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      musicurl: `https://music.163.com/song/media/outer/url?id=${options.songid}.mp3`
+    const _this = this
+    let playIco = this.data.playIco == './imgs/pause.svg' ? './imgs/play.svg' : './imgs/pause.svg'
+    innerAudioContext.autoplay = true
+    innerAudioContext.src = `https://music.163.com/song/media/outer/url?id=${options.songid}.mp3`
+    innerAudioContext.onPlay(() => {
+      _this.setData({ playIco })
     })
+    innerAudioContext.onPause(() => {
+      _this.setData({ playIco })
+    })
+    this.songDetails(options.songid)
+    // this.setData({
+    //   musicurl: `https://music.163.com/song/media/outer/url?id=${options.songid}.mp3`
+    // });
   },
 
   /**
@@ -83,23 +97,25 @@ Page({
   timeSliderChanged(e) {
     console.log('进度', e)
   },
-  // 播放音乐
-  play() {
-    console.log('play')
-
-    this.setData({
-      audioAction: {
-        method: 'pause'
-      }
-    });
+  // 音乐播放控制
+  playControl() {
+    this.data.playIco == './imgs/pause.svg'
+      ? innerAudioContext.pause()
+      : innerAudioContext.play()
   },
-  pause(){
-    console.log('pause')
-
-    this.setData({
-      audioAction: {
-        method: 'play'
-      }
-    });
+  // 获取歌曲详情
+  songDetails(id = 1348044876) {
+    const _this = this
+    wx.request({
+      url: `http://wyyyy.xyz:3000/song/detail?ids=${id}`,
+      success: res => {
+        console.log('获取成功', res);
+        if (res.data.code != 200) return;
+        _this.setData({
+          songDetails: res.data.songs[0]
+        })
+      },
+      fail: err => { }
+    })
   }
 })

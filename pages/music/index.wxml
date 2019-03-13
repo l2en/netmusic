@@ -1,8 +1,9 @@
 <!--pages/play/index.wxml-->
 <view class='music-player-container'>
-  <audio src="{{musicurl}}" action="{{audioAction}}"hidden controls></audio>
+<!-- <image class='bgCover' src='{{bgSrc}}'></image> -->
+  <!-- <audio src="{{musicurl}}" action="{{audioAction}}"hidden controls></audio> -->
   <view class='music-player-coverPoster'>
-    <image bindtap='play' src='./imgs/poster.jpg' class='music-player-posterImg'></image>
+    <image bindtap='play' src='{{songDetails.al.picUrl}}' class='music-player-posterImg'></image>
   </view>
   <scroll-view class='music-player-lrc' scroll-y>
     <text class='lrc'>梨花树下卷丝轮 随风纷纷</text>
@@ -16,13 +17,13 @@
   </scroll-view>
   <view class='music-player-controller'>
     <view class='music-player-controller-left'>
-      <image src='./imgs/poster.jpg' class='music-player-controller-poster'></image>
+      <image src='{{songDetails.al.picUrl}}' class='music-player-controller-poster'></image>
       <image src='./imgs/oneloop.svg' class='iconSize'></image>
     </view>
     <view class='music-player-controller-right'>
       <view>
 
-        <text class='music-player-controller-right-songName'>风筝误  -  刘珂诶(古风)</text>
+        <text class='music-player-controller-right-songName'>{{songDetails.al.name}}  -  {{songDetails.ar[0].name}}</text>
         <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' />
         <view class='music-player-controller-right-time'>
           <text>1:32</text>
@@ -32,8 +33,7 @@
 
       <view class='music-player-controller-right-songContorller'>
         <image src='./imgs/presong.svg' class='iconSize'></image>
-        <image src='./imgs/pause.svg' class='iconSize' bindtap='play' hidden='{{audioAction.method == "pause"}}'></image>
-        <image src='./imgs/play.svg' class='iconSize' bindtap='pause' hidden='{{audioAction.method == "play"}}'></image>
+        <image src='{{playIco}}' class='iconSize' bindtap='playControl'></image>
         <image src='./imgs/nextsong.svg' class='iconSize'></image>
         <image src='./imgs/more.svg' class='iconSize'></image>
       </view>

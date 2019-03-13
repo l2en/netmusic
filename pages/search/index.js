@@ -89,7 +89,6 @@ Page({
       wx.request({
         url: `http://wyyyy.xyz:3000/search/suggest?keywords=${e.detail.value}&type=mobile`,
         success: (res) => {
-          console.log('返回', res)
           if (!res.data.result.allMatch) return;
           _this.setData({
             loading: false,
@@ -113,7 +112,6 @@ Page({
     })
     const { searchValue } = this.data;
     if (!searchValue) return;
-    console.log('点击搜索', searchValue);
     this.setData({
       searchListHidden: true,
     })

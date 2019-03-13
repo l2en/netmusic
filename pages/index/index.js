@@ -131,7 +131,6 @@ Page({
         startY
       } = this.data
       let direction = tool.getTouchcolum(endX, endY, startX, startY);
-      console.log('方向', direction);
       if (direction == 'down'){
         this.setData({ addAnimationDown: false})
       } else{

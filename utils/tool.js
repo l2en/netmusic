@@ -10,7 +10,6 @@ const getTouchData = (endX, endY, startX, startY) => {
 };
 
 const getTouchcolum = (endX, endY, startX, startY) => {
-  console.log(endX, endY, startX, startY)
   let turn = "";
   if (endY - startY > 10 && Math.abs(endX - startX) < 50) {      //右滑
     turn = "down";
