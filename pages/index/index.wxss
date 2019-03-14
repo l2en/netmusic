@@ -1,24 +1,71 @@
 /* banner */
-.index-swiper{
-  height: 400rpx;
+
+.index-swiper {
+  height: 300rpx;
 }
+
 /* 主体 */
-.index-main{
+
+.index-main {
   height: calc(100vh - 400rpx);
   width: 100%;
   padding: 20rpx;
   box-sizing: border-box;
 }
-.index-main-item{
+
+.index-main-item {
   width: 100%;
-  height: 160rpx;
   box-sizing: border-box;
 }
-.index-main-item-titleName{
+
+.index-main-item-titleName {
   font-size: 26rpx;
+  height: 100%;
+  width: 10rpx;
+  background: rgb(202, 33, 0);
+  padding: 10rpx;
+  font-weight: 600;
+  color: #fff;
 }
+
+.index-main-item-swiper {
+  margin-top: 20rpx;
+  height: 280rpx;
+}
+
+.index-main-item-tjgd {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+
+.index-main-item-tjgd-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 24rpx;
+  padding: 6rpx;
+  width: 100%;
+}
+
+.rowline {
+  display: inline-block;
+  width: 100rpx;
+  border: 0;
+  border-bottom: 1px rgb(212, 211, 211) solid;
+  position: relative;
+  left: 50%;
+  margin-left: -50rpx;
+}
+
 /* 搜索 */
-.search{
+
+.search {
   width: 100rpx;
   height: 100rpx;
   position: fixed;
@@ -32,21 +79,35 @@
   z-index: 2;
   color: #fff;
 }
-.search-icon{
+
+.search-icon {
   font-size: 40rpx;
 }
 
-.animationUp{
-  animation: up .3s forwards;
+.animationUp {
+  animation: up 0.3s forwards;
 }
-.animationDown{
-  animation:down .3s forwards;
+
+.animationDown {
+  animation: down 0.3s forwards;
 }
-@keyframes up{
- from {bottom: -120rpx;}
-  to {bottom: 50rpx;}
+
+@keyframes up {
+  from {
+    bottom: -120rpx;
+  }
+
+  to {
+    bottom: 50rpx;
+  }
 }
-@keyframes down{
-  from {bottom: 50rpx;}
-  to {bottom: -120rpx;}
+
+@keyframes down {
+  from {
+    bottom: 50rpx;
+  }
+
+  to {
+    bottom: -120rpx;
+  }
 }

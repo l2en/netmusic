@@ -3,20 +3,21 @@ const tool = require('../../utils/tool.js');
 Page({
   data: {
     vertical: false,
-    autoplay: false,
+    autoplay: true,
     circular: false,
     interval: 2000,
-    duration: 500,
+    duration: 1000,
     previousMargin: 0,
     nextMargin: 0,
     indicatorDots:true,
     addAnimationDown: false,
     addAnimationUp: false,
-    imgUrls: [
-      'https://dwz.cn/3XPwC4GG',
-      'https://dwz.cn/vOyBW22b',
-      'https://dwz.cn/8QAsi2Dd'
-    ],
+    banners: [],
+    tjgd:[]
+  },
+  onLoad(){
+    this.getBanner();
+    this.gettjgd()
   },
   //事件处理函数
   bindTap(){
@@ -74,4 +75,27 @@ Page({
       }
     })
   },
+  // get banner
+  getBanner(){
+    wx.request({
+      url: 'http://wyyyy.xyz:3000/banner',
+      success:res=>{
+        const {code, banners} = res.data;
+        if(code != 200) return;
+        this.setData({ banners })
+      },
+      complete:res=>{
+        console.log(res)
+      }
+    })
+  },
+  gettjgd(){
+    wx.request({
+      url: 'http://wyyyy.xyz:3000/personalized',
+      success:res=>{
+        const {code, result} = res.data;
+        this.setData({tjgd: result})
+      }
+    })
+  }
 })
