@@ -1,8 +1,13 @@
-<scroll-view scroll-y scroll-with-animation='true' class="container" bindtouchstart="touchStart" bindtouchend="touchEnd">
-  <view class='item' wx:for="{{movieList}}" wx:key='index' bindtap='bindTap'>
-    <image src='{{item.pic}}' class='item-pic'></image>
-    <text class='item-year'>2019</text>
-    <text class='item-year'>{{item.name}}</text>
+  <swiper class='index-swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+      <swiper-item>
+        <image style='width: 100%;height: 100%' src="{{item}}" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+<scroll-view scroll-y class='index-main'>
+  <view class='index-main-item'>
+    <text class='index-main-item-titleName'>推荐歌单</text>
   </view>
 </scroll-view>
 <view class='search {{addAnimationDown?"animationDown":"animationUp"}}' bindtap='toSearch'>

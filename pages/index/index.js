@@ -2,85 +2,21 @@ const tool = require('../../utils/tool.js');
 
 Page({
   data: {
-    movieList: [
-      {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      },
-      {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      }, {
-        pic: 'https://dwz.cn/Li29qlXY',
-        name: '冰雪奇222333缘'
-      },
-    ],
-    hideHeader: true,
+    vertical: false,
+    autoplay: false,
+    circular: false,
+    interval: 2000,
+    duration: 500,
+    previousMargin: 0,
+    nextMargin: 0,
+    indicatorDots:true,
     addAnimationDown: false,
-    addAnimationUp: false
+    addAnimationUp: false,
+    imgUrls: [
+      'https://dwz.cn/3XPwC4GG',
+      'https://dwz.cn/vOyBW22b',
+      'https://dwz.cn/8QAsi2Dd'
+    ],
   },
   //事件处理函数
   bindTap(){
