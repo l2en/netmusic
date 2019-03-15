@@ -5,7 +5,7 @@ Page({
     vertical: false,
     autoplay: true,
     circular: false,
-    interval: 2000,
+    interval: 5000,
     duration: 1000,
     previousMargin: 0,
     nextMargin: 0,
@@ -17,7 +17,10 @@ Page({
   },
   onLoad(){
     this.getBanner();
-    this.gettjgd()
+    this.gettjgd();
+  },
+  onHide(){
+
   },
   //事件处理函数
   bindTap(){
@@ -97,5 +100,5 @@ Page({
         this.setData({tjgd: result})
       }
     })
-  }
+  },
 })

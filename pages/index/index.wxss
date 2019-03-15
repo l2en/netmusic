@@ -34,13 +34,16 @@
 }
 
 .index-main-item-tjgd {
-  width: 100%;
   height: 100%;
   border-radius: 10rpx;
   overflow: hidden;
-  margin-right: 20rpx;
+  width: 100%;
 }
-
+.index-main-item-swiper wx-swiper-item {
+  width: 40% !important;
+  margin-right: 10%!important;
+  margin-left: 10%!important;
+}
 .index-main-item-tjgd-name {
   position: absolute;
   bottom: 0;

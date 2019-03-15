@@ -1,7 +1,4 @@
-<!--pages/play/index.wxml-->
 <view class='music-player-container'>
-<!-- <image class='bgCover' src='{{bgSrc}}'></image> -->
-  <!-- <audio src="{{musicurl}}" action="{{audioAction}}"hidden controls></audio> -->
   <view class='music-player-coverPoster'>
     <image bindtap='play' src='{{songDetails.al.picUrl}}' class='music-player-posterImg'></image>
   </view>
@@ -24,19 +21,99 @@
       <view>
 
         <text class='music-player-controller-right-songName'>{{songDetails.al.name}}  -  {{songDetails.ar[0].name}}</text>
-        <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' />
+        <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' value='{{sliderCurrentVal}}'/>
         <view class='music-player-controller-right-time'>
-          <text>1:32</text>
-          <text>4:50</text>
+          <text>{{playedTime}}</text>
+          <text>{{musicDurationTime}}</text>
         </view>
       </view>
 
-      <view class='music-player-controller-right-songContorller'>
+      <!-- 播放控制 -->
+      <view class='music-player-controller-right-songContorller '>
         <image src='./imgs/presong.svg' class='iconSize'></image>
         <image src='{{playIco}}' class='iconSize' bindtap='playControl'></image>
         <image src='./imgs/nextsong.svg' class='iconSize'></image>
-        <image src='./imgs/more.svg' class='iconSize'></image>
+        <image src='./imgs/more.svg' class='iconSize' bindtap='moreList'></image>
       </view>
     </view>
   </view>
+
+  <!-- 播放列表 -->
+    <scroll-view scroll-y hidden='{{showPlayList}}' class='music-player-controller-playlist '>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <view class='music-player-controller-playlist-name'>
+          黎明前的黑暗 - NCF 艾力</view>
+      </view>
+    </scroll-view>
 </view>

@@ -5,6 +5,9 @@
     "pages/search/index",
     "pages/mv/index"
   ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#CA2100",

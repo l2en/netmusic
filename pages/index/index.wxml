@@ -10,9 +10,9 @@
   <!-- 推荐歌单 -->
     <view>
       <text class='index-main-item-titleName'>推荐歌单</text>
-      <swiper circular class='index-main-item-swiper' previous-margin="0" next-margin="0px">
-        <block wx:for='{{tjgd}}' wx:key='{{index}}' style='width: 220rpx;'>
-          <swiper-item style='position: relative;overflow:hidden;'>
+      <swiper circular class='index-main-item-swiper'>
+        <block wx:for='{{tjgd}}' wx:key='{{index}}'>
+          <swiper-item>
             <image class='index-main-item-tjgd' src="{{item.picUrl}}" />
             <text class='index-main-item-tjgd-name'>{{item.name}}</text>
           </swiper-item>
