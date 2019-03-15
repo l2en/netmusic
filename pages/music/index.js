@@ -1,6 +1,5 @@
 // pages/play/index.js
 const time = require('../../utils/time.js');
-
 let innerAudioContext = wx.createInnerAudioContext()
 
 Page({
@@ -71,7 +70,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    this.offTimeUpdate()
   },
 
   /**
@@ -139,7 +137,7 @@ Page({
   },
   // 取消监听音乐播放进度
   offTimeUpdate() {
-    innerAudioContext.offTimeUpdate(() => { })
+
   },
   // 监听音乐暂停函数
   onPause() {
