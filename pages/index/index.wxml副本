@@ -1,0 +1,42 @@
+<swiper class='index-swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" circular='true' previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+  <block wx:for="{{banners}}" wx:key='{{index}}'>
+    <swiper-item>
+      <image style='width: 100%;height: 100%' src="{{item.imageUrl}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <scroll-view scroll-y class='index-main'>
+  <view class='index-main-item'>
+    <!-- 推荐歌单 -->
+    <view>
+      <text class='index-main-item-titleName'>推荐歌单</text>
+      <swiper circular class='index-main-item-swiper'>
+        <block wx:for='{{tjgd}}' wx:key='{{index}}'>
+          <swiper-item>
+            <image class='index-main-item-tjgd' src="{{item.picUrl}}" />
+            <text class='index-main-item-tjgd-name'>{{item.name}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+      <text class='rowline'></text>
+    </view>
+    <!-- 最新音乐 -->
+    <view>
+      <text class='index-main-item-titleName'>最新音乐</text>
+      <swiper circular class='index-main-item-swiper' previous-margin="0" next-margin="220px">
+        <block wx:for="{{banners}}" wx:key='{{index}}' class='block'>
+          <swiper-item>
+            <image class='index-main-item-tjgd' src="{{item.imageUrl}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <text class='rowline'></text>
+    </view>
+    <!-- 单曲 -->
+  </view>
+
+
+</scroll-view> -->
+<view class='search {{addAnimationDown?"animationDown":"animationUp"}}' bindtap='toSearch'>
+  <text class='iconfont icon-search search-icon'></text>
+</view>

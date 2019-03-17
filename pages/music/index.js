@@ -11,12 +11,12 @@ Page({
     poster: "http://p1.music.126.net/MtofDr4IqworgZ7Ri3HY_g==/109951163064544587.jpg",
     bgSrc: 'https://dwz.cn/wbPxDoMM',
     songDetails: {},
-    playIco: './imgs/pause.svg',
+    playIco: '../../assets/ico/pause.svg',
     showPlayList: true,
     sliderCurrentVal: 0,
     duration: 0,
     musicDurationTime: '--:--',
-    playedTime: '0:00'
+    playedTime: '0:00',
   },
   /**
    * 生命周期函数--监听页面加载
@@ -26,7 +26,7 @@ Page({
     this.songDetails(options.songid);
     this.playEnded();
     this.onPause();
-    this.onPlay()
+    this.onPlay();
   },
   // 存数据到localstorage
   saveData2Storage(key, val) {
@@ -109,10 +109,10 @@ Page({
     })
   },
   // 音乐播放控制
-  playControl(e) {
+  playControl() {
     const { playIco } = this.data;
-    playIco == './imgs/pause.svg' && innerAudioContext.pause();
-    playIco == './imgs/pause.svg' || innerAudioContext.play();
+    playIco == '../../assets/ico/pause.svg' && innerAudioContext.pause();
+    playIco == '../../assets/ico/pause.svg' || innerAudioContext.play();
   },
   // 拖动进度
   timeSliderChanged(e) {
@@ -144,7 +144,7 @@ Page({
     const _this = this
     innerAudioContext.onPause(() => {
       _this.setData({
-        playIco: './imgs/play.svg'
+        playIco: '../../assets/ico/play.svg'
       })
     })
   },
@@ -166,7 +166,7 @@ Page({
     const _this = this
     innerAudioContext.onPlay(() => {
       _this.setData({
-        playIco: './imgs/pause.svg',
+        playIco: '../../assets/ico/pause.svg',
       })
     })
   },
@@ -175,7 +175,7 @@ Page({
     const _this = this
     innerAudioContext.onEnded(() => {
       _this.setData({
-        playIco: './imgs/play.svg'
+        playIco: '../../assets/ico/play.svg'
       })
     })
   },

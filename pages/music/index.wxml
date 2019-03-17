@@ -15,11 +15,10 @@
   <view class='music-player-controller'>
     <view class='music-player-controller-left'>
       <image src='{{songDetails.al.picUrl}}' class='music-player-controller-poster'></image>
-      <image src='./imgs/oneloop.svg' class='iconSize'></image>
+      <image src='../../assets/ico/oneloop.svg' class='iconSize'></image>
     </view>
     <view class='music-player-controller-right'>
       <view>
-
         <text class='music-player-controller-right-songName'>{{songDetails.al.name}}  -  {{songDetails.ar[0].name}}</text>
         <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' value='{{sliderCurrentVal}}'/>
         <view class='music-player-controller-right-time'>
@@ -30,10 +29,10 @@
 
       <!-- 播放控制 -->
       <view class='music-player-controller-right-songContorller '>
-        <image src='./imgs/presong.svg' class='iconSize'></image>
+        <image src='../../assets/ico/presong.svg' class='iconSize'></image>
         <image src='{{playIco}}' class='iconSize' bindtap='playControl'></image>
-        <image src='./imgs/nextsong.svg' class='iconSize'></image>
-        <image src='./imgs/more.svg' class='iconSize' bindtap='moreList'></image>
+        <image src='../../assets/ico/nextsong.svg' class='iconSize'></image>
+        <image src='../../assets/ico/more.svg' class='iconSize' bindtap='moreList'></image>
       </view>
     </view>
   </view>
@@ -41,77 +40,7 @@
   <!-- 播放列表 -->
     <scroll-view scroll-y hidden='{{showPlayList}}' class='music-player-controller-playlist '>
       <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='./imgs/toplay.svg' class='music-player-controller-playlist-icon'></image>
+        <image src='../../assets/ico/toplay.svg' class='music-player-controller-playlist-icon'></image>
         <view class='music-player-controller-playlist-name'>
           黎明前的黑暗 - NCF 艾力</view>
       </view>

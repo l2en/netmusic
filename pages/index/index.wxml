@@ -5,38 +5,48 @@
     </swiper-item>
   </block>
 </swiper>
-<scroll-view scroll-y class='index-main'>
-  <view class='index-main-item'>
-  <!-- 推荐歌单 -->
-    <view>
-      <text class='index-main-item-titleName'>推荐歌单</text>
-      <swiper circular class='index-main-item-swiper'>
-        <block wx:for='{{tjgd}}' wx:key='{{index}}'>
-          <swiper-item>
-            <image class='index-main-item-tjgd' src="{{item.picUrl}}" />
-            <text class='index-main-item-tjgd-name'>{{item.name}}</text>
-          </swiper-item>
-        </block>
-      </swiper>
-      <text class='rowline'></text>
+<view class='index-main-wrapper'>
+  <scroll-view class='index-main' scroll-y>
+    <!-- ·推荐歌单 -->
+    <view class='index-main-tjgd p-10'>
+      <!-- 推荐歌单title -->
+      <view class='index-main-tjgd-title'>
+        <image src='../../assets/ico/good.svg' class='index-main-tjgd-ico'></image>
+        <text class='tiltename'>推荐歌单</text>
+      </view>
+      <!-- 推荐歌单滚动部分 -->
+      <scroll-view scroll-x class='index-main-tjgd-main'>
+        <view class='index-main-tjgd-main-wrapper' wx:for='{{tjgd}}' wx:key='{{index}}'>
+          <image src='{{item.picUrl}}' class='index-main-tjgd-main-img'></image>
+          <text class='index-main-tjgd-main-songname'>{{item.name}}- {{item.copywriter}}</text>
+          <text class='index-main-tjgd-main-played'>聆听: {{item.playCount}}</text>
+        </view>
+      </scroll-view>
     </view>
-  <!-- 最新音乐 -->
-    <view>
-      <text class='index-main-item-titleName'>最新音乐</text>
-      <swiper circular class='index-main-item-swiper' previous-margin="0" next-margin="220px">
-        <block wx:for="{{banners}}" wx:key='{{index}}' class='block'>
-          <swiper-item>
-            <image class='index-main-item-tjgd' src="{{item.imageUrl}}" />
-          </swiper-item>
-        </block>
-      </swiper>
-      <text class='rowline'></text>
+<!-- ------------------------------------- -->
+    <!-- ·推荐歌曲 -->
+    <view class='index-main-tjgq p-10'>
+      <!-- 推荐歌单title -->
+      <view class='index-main-tjgd-title'>
+        <image src='../../assets/ico/ph.svg' class='index-main-tjgd-ico'></image>
+        <text class='tiltename'>推荐歌曲</text>
+      </view>
+      <!-- 推荐歌曲滚动部分 -->
+      <view scroll-y class='index-main-song'>
+        <view class='index-main-song-list' wx:for='{{songs}}' wx:key='{{index}}'>
+          <image src='https://dwz.cn/nW1ChMDV' class='index-main-song-list-img'></image>
+          <text style='color: #c3c3c3;font-size: 30rpx;margin-left: 10rpx'>1</text>
+          <view class='index-main-song-list-right'>
+            <text class='index-main-song-list-right-name'>Skin</text>
+            <text class='index-main-song-list-right-ginger'>Rag'N'Bone Man - Skin</text>
+          </view>
+        </view>
+        
+      </view>
     </view>
-  <!-- 单曲 -->
-  </view>
+  </scroll-view>
+</view>
 
-
-</scroll-view>
 <view class='search {{addAnimationDown?"animationDown":"animationUp"}}' bindtap='toSearch'>
   <text class='iconfont icon-search search-icon'></text>
 </view>

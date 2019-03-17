@@ -89,7 +89,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   float: left;
   width: 100rpx;
 }
@@ -111,7 +111,7 @@
   font-size: 26rpx;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .music-player-controller-right-songName {
@@ -137,7 +137,7 @@
 .music-player-controller-right-songContorller {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: relative;
   bottom: 0;
 }

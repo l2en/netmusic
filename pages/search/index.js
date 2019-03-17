@@ -10,7 +10,8 @@ Page({
     searchValue: '',
     searchListHidden: true,
     songs:[],
-    loading: false
+    loading: false,
+    showOp: false
   },
 
   /**
@@ -146,5 +147,9 @@ Page({
     wx.navigateTo({
       url: `../music/index?songid=${songid}`,
     })
+  },
+  // 搜索结果操作
+  sonlistOp(id){
+
   }
 })

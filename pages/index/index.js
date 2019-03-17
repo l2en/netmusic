@@ -13,7 +13,8 @@ Page({
     addAnimationDown: false,
     addAnimationUp: false,
     banners: [],
-    tjgd:[]
+    tjgd:[],
+    songs:[321,321,321,3,23,2,24,21]
   },
   onLoad(){
     this.getBanner();
@@ -93,9 +94,11 @@ Page({
     })
   },
   gettjgd(){
+    // http://wyyyy.xyz:3000/top/playlist
     wx.request({
       url: 'http://wyyyy.xyz:3000/personalized',
       success:res=>{
+        console.log('sss',res)
         const {code, result} = res.data;
         this.setData({tjgd: result})
       }

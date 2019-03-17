@@ -1,73 +1,119 @@
 /* banner */
 
 .index-swiper {
-  height: 300rpx;
+  height: 400rpx;
 }
 
 /* 主体 */
-
-.index-main {
+.index-main-wrapper{
+  width: 100vw;
   height: calc(100vh - 400rpx);
+  padding: 15rpx 15rpx 0 15rpx;
+  box-sizing: border-box;
+  background-color: rgb(202, 33, 0);
+  position: relative;
+}
+.index-main{
   width: 100%;
-  padding: 20rpx;
+  height: calc(100% + 85rpx);
+  background-color: #fff;
+  margin-top: -100rpx;
+  position: relative;
+  z-index: 2;
+  border-radius: 5rpx;
+}
+.p-10{
+  padding: 10rpx!important;
   box-sizing: border-box;
 }
-
-.index-main-item {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.index-main-item-titleName {
-  font-size: 26rpx;
-  height: 100%;
-  width: 10rpx;
-  background: rgb(202, 33, 0);
-  padding: 10rpx;
+.tiltename{
+  font-size: 28rpx;
+  margin-left: 10rpx;
   font-weight: 600;
-  color: #fff;
 }
-
-.index-main-item-swiper {
+.index-main-tjgd{
+  width: 100%;
+  border: 0;
+  border-bottom: 10rpx rgb(202, 33, 0) solid;
+}
+.index-main-tjgd-title{
+  display: flex;
+  align-items: center;
+  border: 0;
+  border-bottom: 1rpx #eee solid;
+  padding-bottom: 10rpx;
+  margin-bottom: 20rpx;
+}
+.index-main-tjgd-ico{
+  width: 35rpx;
+  height: 35rpx;
+}
+.index-main-tjgd-main{
+  width: 100%;
   margin-top: 20rpx;
-  height: 280rpx;
+  box-sizing: border-box;
+  white-space:nowrap;
 }
-
-.index-main-item-tjgd {
-  height: 100%;
+.index-main-tjgd-main-wrapper{
+  width: 180rpx;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 5rpx;
+}
+.index-main-tjgd-main-img{
+  width: 100%;
+  height: 250rpx;
   border-radius: 10rpx;
   overflow: hidden;
-  width: 100%;
 }
-.index-main-item-swiper wx-swiper-item {
-  width: 40% !important;
-  margin-right: 10%!important;
-  margin-left: 10%!important;
-}
-.index-main-item-tjgd-name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
+.index-main-tjgd-main-songname{
+  display: block;
   font-size: 24rpx;
-  padding: 6rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-weight: 600;
+}
+.index-main-tjgd-main-played{
+  font-size: 22rpx;
+  color: rgb(206, 204, 204);
+  display: block;
+  margin-top: 0
+}
+/* 推荐歌曲 */
+.index-main-tjgq{
   width: 100%;
-}
-
-.rowline {
-  display: inline-block;
-  width: 100rpx;
   border: 0;
-  border-bottom: 1px rgb(212, 211, 211) solid;
-  position: relative;
-  left: 50%;
-  margin-left: -50rpx;
 }
-
+.index-main-song-list{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0 10rpx 0;
+}
+.index-main-song-list-img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.index-main-song-list-right{
+  width: calc(100% - 60rpx);
+  height: 100%;
+  display: inline-block;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 5rpx;
+  border-bottom: 1px #eee solid;
+}
+.index-main-song-list-right text{
+  display: block;
+}
+.index-main-song-list-right-name{
+  font-size: 30rpx;
+}
+.index-main-song-list-right-ginger{
+  font-size: 20rpx;
+  color: rgb(226, 226, 226);
+}
 /* 搜索 */
-
 .search {
   width: 100rpx;
   height: 100rpx;

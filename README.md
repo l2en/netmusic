@@ -16,3 +16,8 @@
 **开发技巧**
 + **控制局部滚动**： 在app.wxss中添加page{overflow-y: hidden;},局部使用<scroll-view>组件并指定高度即可
 + **页面控制**： 每一个view组件应该添加一个box-sing:border-box属性，不然padding会导致view溢出屏幕
+
+**Q&A**:
++ 小程序中引入的阿里图标库图标在ios中无法显示；**why**：ios不支持除https意外的资源引入; **解决**：使用https引入阿里图标。如：url('https://at.alicdn.com/t/font_1066189_t2slgjhj2kc.woff') format('woff')
+  
++ **scroll-view横向滚动实现条件**：1、明确指定父级的宽高 2、父元素必须写white-space:nowrap; 3、子元素必须写display:inline-block

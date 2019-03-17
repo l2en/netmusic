@@ -12,8 +12,8 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.1",
-	"appid": "wx4577da714279820f",
+	"libVersion": "2.6.2",
+	"appid": "wxd577a7a06e15baa8",
 	"projectname": "netmusic",
 	"debugOptions": {
 		"hidedInDevtools": []
