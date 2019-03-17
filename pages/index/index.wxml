@@ -33,12 +33,12 @@
       </view>
       <!-- 推荐歌曲滚动部分 -->
       <view scroll-y class='index-main-song'>
-        <view class='index-main-song-list' wx:for='{{songs}}' wx:key='{{index}}'>
-          <image src='https://dwz.cn/nW1ChMDV' class='index-main-song-list-img'></image>
-          <text style='color: #c3c3c3;font-size: 30rpx;margin-left: 10rpx'>1</text>
+        <view class='index-main-song-list' bindtap='toplay' data-id='{{item.id}}' wx:for='{{songs}}' wx:key='{{index}}'>
+          <image src='{{item.al.picUrl}}' class='index-main-song-list-img'></image>
+          <text  hidden='{{index + 1 > 10 ? true : false}}' style='color: #c3c3c3;font-size: 30rpx;margin-left: 10rpx'>{{index+1}}</text>
           <view class='index-main-song-list-right'>
-            <text class='index-main-song-list-right-name'>Skin</text>
-            <text class='index-main-song-list-right-ginger'>Rag'N'Bone Man - Skin</text>
+            <text class='index-main-song-list-right-name'>{{item.name}}</text>
+            <text class='index-main-song-list-right-ginger'>{{item.ar.length>0&&item.ar[0].name}}</text>
           </view>
         </view>
         

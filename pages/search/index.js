@@ -142,7 +142,6 @@ Page({
   },
   // 播放音乐
   playMusic(e) {
-    console.log(e.currentTarget.dataset.id);
     let songid = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `../music/index?songid=${songid}`,

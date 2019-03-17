@@ -14,11 +14,12 @@ Page({
     addAnimationUp: false,
     banners: [],
     tjgd:[],
-    songs:[321,321,321,3,23,2,24,21]
+    songs: [321, 321, 321, 3, 23, 2, 24, 21, 321, 321, 321, 3, 23, 2, 24, 21, 321, 321, 321, 3, 23, 2, 24, 21]
   },
   onLoad(){
     this.getBanner();
     this.gettjgd();
+    this.getHotSongs()
   },
   onHide(){
 
@@ -93,6 +94,7 @@ Page({
       }
     })
   },
+  // 获取推荐歌单
   gettjgd(){
     // http://wyyyy.xyz:3000/top/playlist
     wx.request({
@@ -104,4 +106,24 @@ Page({
       }
     })
   },
+  // 获取推荐歌曲（云音乐热歌榜）
+  getHotSongs(){
+    wx.request({
+      url: 'http://wyyyy.xyz:3000/top/list?idx=1',
+      success: res=>{
+        console.log('===热歌榜', res);
+        if(res.data.code != 200) return;
+        this.setData({
+          songs: res.data.playlist.tracks
+        })
+      }
+    })
+  },
+  // 根据推荐歌曲播放
+  toplay(e){
+    let songid = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../music/index?songid=${songid}`,
+    })
+  }
 })

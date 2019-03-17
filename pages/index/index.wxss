@@ -21,6 +21,7 @@
   position: relative;
   z-index: 2;
   border-radius: 5rpx;
+  box-shadow:0 0 5rpx rgba(0,0,0,.4);
 }
 .p-10{
   padding: 10rpx!important;
@@ -29,7 +30,7 @@
 .tiltename{
   font-size: 28rpx;
   margin-left: 10rpx;
-  font-weight: 600;
+  font-weight: blod;
 }
 .index-main-tjgd{
   width: 100%;
@@ -53,12 +54,13 @@
   margin-top: 20rpx;
   box-sizing: border-box;
   white-space:nowrap;
+  min-height: 163rpx;
 }
 .index-main-tjgd-main-wrapper{
   width: 180rpx;
   overflow: hidden;
   display: inline-block;
-  margin-right: 5rpx;
+  margin-right: 10rpx;
 }
 .index-main-tjgd-main-img{
   width: 100%;
