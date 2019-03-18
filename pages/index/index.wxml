@@ -6,7 +6,7 @@
   </block>
 </swiper>
 <view class='index-main-wrapper'>
-  <scroll-view class='index-main' scroll-y>
+  <scroll-view class='index-main' scroll-y bindtouchstart='touchStart' bindtouchend='touchEnd'>
     <!-- ·推荐歌单 -->
     <view class='index-main-tjgd p-10'>
       <!-- 推荐歌单title -->
@@ -32,7 +32,7 @@
         <text class='tiltename'>推荐歌曲</text>
       </view>
       <!-- 推荐歌曲滚动部分 -->
-      <view scroll-y class='index-main-song'>
+      <view class='index-main-song'>
         <view class='index-main-song-list' bindtap='toplay' data-id='{{item.id}}' wx:for='{{songs}}' wx:key='{{index}}'>
           <image src='{{item.al.picUrl}}' class='index-main-song-list-img'></image>
           <text  hidden='{{index + 1 > 10 ? true : false}}' style='color: #c3c3c3;font-size: 30rpx;margin-left: 10rpx'>{{index+1}}</text>
