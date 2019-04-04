@@ -2,15 +2,12 @@
   <view class='music-player-coverPoster'>
     <image bindtap='play' src='{{songDetails.al.picUrl}}' class='music-player-posterImg'></image>
   </view>
-  <scroll-view class='music-player-lrc' scroll-y>
-    <text class='lrc'>梨花树下卷丝轮 随风纷纷</text>
-    <text class='lrc'>谁裁木鹊一缕魂 落别村</text>
-    <text class='lrc'>风影无心惊扰了 对棋人</text>
-    <text class='lrc'>幔里和诗 怕春雨成盆</text>
-    <text class='lrc'>玉指揽风风不住 茜纱窗昏</text>
-    <text class='lrc'>舟上摇波波不停 渡影重温</text>
-    <text class='lrc'>一抹笙香 吹梦成真</text>
-    <text class='lrc'>风筝误 误了梨花花又开</text>
+  <scroll-view bindscroll='scrollChange' scroll-top='{{lrcScrollTop}}' scroll-with-animation='true' class='music-player-lrc' scroll-y>
+    <view class='lrc-content'>
+      <block wx:for='{{lrc}}' wx:key='{{index}}'>
+        <text class='lrc {{lrc[index - 1][0]<currentTime &&  lrc[index + 1][0]>currentTime? "music-play-active":""}}'>{{item[1]}}</text>
+      </block>
+    </view>
   </scroll-view>
   <view class='music-player-controller'>
     <view class='music-player-controller-left'>
@@ -20,7 +17,7 @@
     <view class='music-player-controller-right'>
       <view>
         <text class='music-player-controller-right-songName'>{{songDetails.al.name}}  -  {{songDetails.ar[0].name}}</text>
-        <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' value='{{sliderCurrentVal}}'/>
+        <slider class='music-player-controller-right-slider' bindchange="timeSliderChanged" backgroundColor='rgb(210,210,210)' activeColor='rgb(172,172,172)' block-size='12' value='{{sliderCurrentVal}}' />
         <view class='music-player-controller-right-time'>
           <text>{{playedTime}}</text>
           <text>{{musicDurationTime}}</text>
@@ -38,11 +35,11 @@
   </view>
 
   <!-- 播放列表 -->
-    <scroll-view scroll-y hidden='{{showPlayList}}' class='music-player-controller-playlist '>
-      <view class='music-player-controller-playlist-item' bindtap='playFromList'>
-        <image src='../../assets/ico/toplay.svg' class='music-player-controller-playlist-icon'></image>
-        <view class='music-player-controller-playlist-name'>
-          黎明前的黑暗 - NCF 艾力</view>
-      </view>
-    </scroll-view>
+  <scroll-view scroll-y hidden='{{showPlayList}}' class='music-player-controller-playlist '>
+    <view class='music-player-controller-playlist-item' bindtap='playFromList'>
+      <image src='../../assets/ico/toplay.svg' class='music-player-controller-playlist-icon'></image>
+      <view class='music-player-controller-playlist-name'>
+        黎明前的黑暗 - NCF 艾力</view>
+    </view>
+  </scroll-view>
 </view>

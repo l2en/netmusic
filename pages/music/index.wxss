@@ -15,9 +15,7 @@
   padding: 20rpx;
   background-color: rgba(163, 163, 163, 0.418);
 }
-
 /* 底图 */
-
 .bgCover {
   position: absolute;
   left: 0;
@@ -27,7 +25,6 @@
 }
 
 /* 顶部poster */
-
 .music-player-coverPoster {
   position: relative;
   z-index: 2;
@@ -60,7 +57,7 @@
   margin-top: 30rpx;
   background-color: #fff;
   text-align: center;
-  font-size: 26rpx;
+  font-size: 24rpx;
   padding: 10rpx 0 10rpx 0;
   box-sizing: border-box;
 }
@@ -172,4 +169,15 @@
   font-size: 26rpx;
   color: #fff;
   margin-left: 20rpx;
+}
+ /* 音乐播放效果 */
+.music-play-active{
+  color: rgb(228, 6, 6);
+  font-size: 30rpx;
+  text-shadow: 0 0 20px rgb(228, 6, 6);
+}
+.lrc-content{
+  box-sizing: border-box;
+  position: relative;
+  animation: all .3s ease-in-out;
 }
