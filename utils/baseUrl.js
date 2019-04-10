@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: 'https://wyyyy.xyz:433',
+  baseUrl: 'http://wyyyy.xyz:3300',
 }
