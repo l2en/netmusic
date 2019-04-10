@@ -1,5 +1,7 @@
 // pages/play/index.js
 const time = require('../../utils/time.js');
+const baseUrl = require('../../utils/baseUrl.js');
+
 let innerAudioContext = wx.createInnerAudioContext()
 
 Page({
@@ -48,7 +50,6 @@ Page({
     wx.getStorage({
       key: key,
       success(res) {
-        console.log(res.data);
         return res.data
       }
     })
@@ -107,11 +108,9 @@ Page({
   },
   // 根据id获取音乐
   handleSearch(songid) {
-    console.log('获取搜索传参', songid);
     wx.request({
       url: `https://music.163.com/song/media/outer/url?id=${songid}.mp3`,
       success: (res) => {
-        console.log('搜索=====>>>', res)
       }
     })
   },
@@ -139,7 +138,6 @@ Page({
         currentTime = innerAudioContext.currentTime,
         sliderCurrentVal = (100 / duration) * currentTime;
       let currentlrcIndex= _this.handleCurrentIndex(currentTime);
-      console.log('>>', currentlrcIndex)
       _this.setData({
         sliderCurrentVal,
         currentlrcIndex,
@@ -200,7 +198,7 @@ Page({
   songDetails(id = 571338279) {
     const _this = this
     wx.request({
-      url: `http://wyyyy.xyz:3000/song/detail?ids=${id}`,
+      url: `${baseUrl.baseUrl}/song/detail?ids=${id}`,
       success: res => {
         if (res.data.code != 200) return;
         _this.setData({
@@ -259,9 +257,8 @@ Page({
       return result;
     }
     wx.request({
-      url: `http://wyyyy.xyz:3000/lyric?id=${id}`,
+      url: `${baseUrl.baseUrl}/lyric?id=${id}`,
       success: res => {
-        console.log('获取lrc', res);
         if (res.data.nolyric) {
           _this.setData({
             lrc: [['nolrc', '暂无歌词']]
@@ -277,13 +274,11 @@ Page({
   },
   // 滑动歌词
   scrollChange(e) {
-    console.log('滑动', e.detail);
   },
   // 确定当前歌词index
   handleCurrentIndex(currentTime){
     const _this = this
     const { lrc } = this.data
-    console.log(this.data.duration, lrc[lrc.length - 1][0])
     let lrcScrollTop = (this.data.duration / lrc[lrc.length - 1][0]) * currentTime*21
     this.setData({
       lrcScrollTop

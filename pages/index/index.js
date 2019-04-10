@@ -1,4 +1,5 @@
 const tool = require('../../utils/tool.js');
+const baseUrl = require('../../utils/baseUrl.js');
 
 Page({
   data: {
@@ -83,7 +84,7 @@ Page({
   // get banner
   getBanner(){
     wx.request({
-      url: 'http://wyyyy.xyz:3000/banner',
+      url: `${baseUrl.baseUrl}/banner`,
       success:res=>{
         const {code, banners} = res.data;
         if(code != 200) return;
@@ -98,7 +99,7 @@ Page({
   gettjgd(){
     // http://wyyyy.xyz:3000/top/playlist
     wx.request({
-      url: 'http://wyyyy.xyz:3000/personalized',
+      url: `${baseUrl.baseUrl}/personalized`,
       success:res=>{
         console.log('sss',res)
         const {code, result} = res.data;
@@ -109,7 +110,7 @@ Page({
   // 获取推荐歌曲（云音乐热歌榜）
   getHotSongs(){
     wx.request({
-      url: 'http://wyyyy.xyz:3000/top/list?idx=1',
+      url: `${baseUrl.baseUrl}/top/list?idx=1`,
       success: res=>{
         console.log('===热歌榜', res);
         if(res.data.code != 200) return;

@@ -1,3 +1,5 @@
+const baseUrl = require('../../utils/baseUrl.js');
+
 // pages/search/index.js
 Page({
 
@@ -88,7 +90,7 @@ Page({
     });
     function getSuggest() {
       wx.request({
-        url: `http://wyyyy.xyz:3000/search/suggest?keywords=${e.detail.value}&type=mobile`,
+        url: `${baseUrl.baseUrl}/search/suggest?keywords=${e.detail.value}&type=mobile`,
         success: (res) => {
           if (!res.data.result.allMatch) return;
           _this.setData({
@@ -117,7 +119,7 @@ Page({
       searchListHidden: true,
     })
     wx.request({
-      url: `http://wyyyy.xyz:3000/search?keywords=${searchValue}`,
+      url: `${baseUrl.baseUrl}/search?keywords=${searchValue}`,
       success:(res)=>{
         console.log('搜索单曲===》》》》》》', res);
         if (res.statusCode != 200) return;
