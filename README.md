@@ -23,16 +23,6 @@
 + **scroll-view横向滚动实现条件**：1、明确指定父级的宽高 2、父元素必须写white-space:nowrap; 3、子元素必须写display:inline-block
 + **在wxml传参到方法**: 如获取id为例；在wxml的DOM上绑定data-id='{{item.id}}';在方法中e.currentTarget.dataset.id进行获取
 
-
 **设计图预览**:
-首页：
-![index](/preview/index.png)
+![preview](/preview/preview.png)
 
-搜索：
-![search](/preview/search.png)
-
-播放：
-![play](/preview/play.png)
-
-播放列表：
-![playlist](/preview/playlist.png)
