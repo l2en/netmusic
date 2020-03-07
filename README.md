@@ -2,7 +2,7 @@
 
 **接口调用**:
 
-+ 线上小程序的ajax小程序调用必须是https,不能是本地localhost或ip访问；所以必须准备一个vps+域名
++ 线上小程序的接口调用必须是https,不能是本地localhost或ip访问；所以必须准备一个vps+域名
 
 
 
