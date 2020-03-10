@@ -24,5 +24,5 @@
 + **在wxml传参到方法**: 以获取id为例；在wxml的DOM上绑定data-id='{{item.id}}';在方法中e.currentTarget.dataset.id进行获取
 
 **设计图预览**:
-![preview](/preview/preview.png)
+![preview](https://imgchr.com/i/8P5PE9)
 
