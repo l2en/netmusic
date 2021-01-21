@@ -1,4 +1,4 @@
-### net云音乐小程序踩坑日记
+### 基于NeteaseCloudMusicApi实现小程序音乐app - 踩坑日记
 
 **接口调用**:
 
